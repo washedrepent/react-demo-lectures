@@ -38,3 +38,14 @@ p {
     margin: 10px;
     cursor: pointer;
 }
+.sport-prompt {
+    font-size: 3rem;
+    margin: 0.67em 0;
+    color: black;
+    font-weight: bold;
+}
+.sport-selected {
+    font-size: 2rem;
+    margin: 0.67em 0;
+    font-weight: bold;
+}

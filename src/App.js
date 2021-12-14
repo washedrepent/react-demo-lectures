@@ -1,12 +1,14 @@
 import "./App.css";
+import { useState } from "react";
 import Description from "./components/Description";
 import Header from "./components/Header";
 import MainImage from "./components/MainImage";
 import MyButton from "./components/MyButton";
 
 function App() {
+    const [sportText, setSportText] = useState("Please select a sport");
     const onButtonClick = function (activity) {
-        alert(activity);
+        setSportText(activity);
     };
 
     return (
@@ -27,6 +29,9 @@ function App() {
             <MyButton btnName='Ice Hockey' onClick={onButtonClick} />
             <MyButton btnName='Basketball' onClick={onButtonClick} />
             <MyButton btnName='Soccer' onClick={onButtonClick} />
+
+            <h2 className='sport-prompt'>Favourite Sports</h2>
+            <h3 className='sport-selected'>{sportText}</h3>
         </div>
     );
 }
