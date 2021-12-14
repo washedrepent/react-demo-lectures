@@ -3,13 +3,15 @@ import { useState } from "react";
 import Description from "./components/Description";
 import Header from "./components/Header";
 import MainImage from "./components/MainImage";
-import MyButton from "./components/MyButton";
+import Buttons from "./components/Buttons";
 
 function App() {
     const [sportText, setSportText] = useState("Please select a sport");
     const onButtonClick = function (activity) {
         setSportText(activity);
     };
+
+    const btnArr = ["Football", "Basketball", "Baseball", "Hockey"];
 
     return (
         <div className='App'>
@@ -26,9 +28,7 @@ function App() {
             sports. The most common sports are ice hockey, lacrosse, soccer,
             basketball, and ice hockey.'
             />
-            <MyButton btnName='Ice Hockey' onClick={onButtonClick} />
-            <MyButton btnName='Basketball' onClick={onButtonClick} />
-            <MyButton btnName='Soccer' onClick={onButtonClick} />
+            <Buttons btnArr={btnArr} onClick={onButtonClick} />
 
             <h2 className='sport-prompt'>Favourite Sports</h2>
             <h3 className='sport-selected'>{sportText}</h3>
