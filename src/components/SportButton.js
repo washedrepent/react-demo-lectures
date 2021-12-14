@@ -1,4 +1,4 @@
-const MyButton = function (props) {
+const SportButton = function (props) {
     const onButtonClicked = function () {
         props.onClick(props.btnName);
     };
@@ -9,4 +9,4 @@ const MyButton = function (props) {
     );
 };
 
-export default MyButton;
+export default SportButton;
